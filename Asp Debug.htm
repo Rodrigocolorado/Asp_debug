@@ -1,0 +1,124 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <meta name="GENERATOR" content="Microsoft FrontPage Express 2.0" />
+    <title>Dicas para "</title>
+  </head>
+
+  <body bgcolor="#FFFFFF">
+    <p align="center">
+      <font color="#FF0000" size="5" face="Arial"
+        ><strong>Dicas para &quot;Debugar&quot;<br /> </strong
+      ></font>
+    </p>
+
+    <p align="left">
+      <font size="2" face="Arial"
+        >O script abaixo � uma forma geral de debugar problemas.</font
+      >
+    </p>
+
+    <p align="left">
+      <font color="#FF0000" size="2" face="Courier New">1&nbsp;</font
+      ><font size="2" face="Courier New">&nbsp;&nbsp;&nbsp;</font
+      ><font color="#0080FF" size="2" face="Courier New"
+        ><strong>&lt;TITLE&gt;dbg.asp&lt;/TITLE&gt;</strong></font
+      ><font size="2" face="Courier New"><br /> </font
+      ><font color="#FF0000" size="2" face="Courier New">2&nbsp;</font
+      ><font size="2" face="Courier New"
+        >&nbsp;&nbsp;&nbsp;&lt;body bgcolor=&quot;#FFFFFF&quot;&gt;<br /> </font
+      ><font color="#FF0000" size="2" face="Courier New">3&nbsp;</font
+      ><font size="2" face="Courier New"
+        >&nbsp;&nbsp;&nbsp;&lt;HTML&gt;<br /> </font
+      ><font color="#FF0000" size="2" face="Courier New">4&nbsp;</font
+      ><font size="2" face="Courier New">&nbsp;&nbsp;&nbsp;</font
+      ><font color="#008000" size="2" face="Courier New">&lt;% <br /> </font
+      ><font color="#FF0000" size="2" face="Courier New">5&nbsp;</font
+      ><font color="#008000" size="2" face="Courier New"
+        >&nbsp;&nbsp;&nbsp;Response.Write(&quot;&lt;P&gt;VARIAVEIS DO
+        FORMULARIO:&lt;br&gt;&quot;)<br /> </font
+      ><font color="#FF0000" size="2" face="Courier New">6&nbsp;</font
+      ><font color="#008000" size="2" face="Courier New"
+        >&nbsp;&nbsp;&nbsp;Response.Write(&quot;-------------------------------&lt;br&gt;&quot;)<br /> </font
+      ><font color="#FF0000" size="2" face="Courier New">7&nbsp;</font
+      ><font color="#008000" size="2" face="Courier New"
+        >&nbsp;&nbsp;&nbsp; For Each Key in Request.Form<br /> </font
+      ><font color="#FF0000" size="2" face="Courier New">8&nbsp;</font
+      ><font color="#008000" size="2" face="Courier New"
+        >&nbsp;&nbsp;&nbsp; Response.Write( Key &amp; &quot; = &quot; &amp;
+        Request.Form(Key) &amp; &quot;&lt;br&gt;&quot;)<br /> </font
+      ><font color="#FF0000" size="2" face="Courier New">9&nbsp;</font
+      ><font color="#008000" size="2" face="Courier New"
+        >&nbsp;&nbsp;&nbsp;Next<br /> </font
+      ><font color="#FF0000" size="2" face="Courier New">10</font
+      ><font color="#008000" size="2" face="Courier New"
+        >&nbsp;&nbsp;&nbsp;<br /> </font
+      ><font color="#FF0000" size="2" face="Courier New">11</font
+      ><font color="#008000" size="2" face="Courier New"
+        >&nbsp;&nbsp;&nbsp;Response.Write(&quot;&lt;P&gt;VARIAVEIS QUERY
+        STRING:&lt;br&gt;&quot;)<br /> </font
+      ><font color="#FF0000" size="2" face="Courier New">12</font
+      ><font color="#008000" size="2" face="Courier New"
+        >&nbsp;&nbsp;&nbsp;Response.Write(&quot;------------------------------&lt;br&gt;&quot;)<br /> </font
+      ><font color="#FF0000" size="2" face="Courier New">13</font
+      ><font color="#008000" size="2" face="Courier New"
+        >&nbsp;&nbsp;&nbsp;For Each Key in Request.QueryString<br /> </font
+      ><font color="#FF0000" size="2" face="Courier New">14</font
+      ><font color="#008000" size="2" face="Courier New"
+        >&nbsp;&nbsp;&nbsp; Response.Write( Key &amp; &quot; = &quot; &amp;
+        Request.QueryString(Key) &amp; &quot;&lt;br&gt;&quot;)<br /> </font
+      ><font color="#FF0000" size="2" face="Courier New">15</font
+      ><font color="#008000" size="2" face="Courier New"
+        >&nbsp;&nbsp;&nbsp;Next<br /> </font
+      ><font color="#FF0000" size="2" face="Courier New">16</font
+      ><font color="#008000" size="2" face="Courier New"
+        >&nbsp;&nbsp;&nbsp;<br /> </font
+      ><font color="#FF0000" size="2" face="Courier New">17</font
+      ><font color="#008000" size="2" face="Courier New"
+        >&nbsp;&nbsp;&nbsp;Response.Write(&quot;&lt;P&gt;VARIAVEIS TIPO
+        COOKIE:&lt;br&gt;&quot;)<br /> </font
+      ><font color="#FF0000" size="2" face="Courier New">18</font
+      ><font color="#008000" size="2" face="Courier New"
+        >&nbsp;&nbsp;&nbsp;Response.Write(&quot;-----------------------------&lt;br&gt;&quot;)<br /> </font
+      ><font color="#FF0000" size="2" face="Courier New">19</font
+      ><font color="#008000" size="2" face="Courier New"
+        >&nbsp;&nbsp;&nbsp;For Each Key in Request.Cookies<br /> </font
+      ><font color="#FF0000" size="2" face="Courier New">20</font
+      ><font color="#008000" size="2" face="Courier New"
+        >&nbsp;&nbsp;&nbsp; Response.Write( Key &amp; &quot; = &quot; &amp;
+        Request.Cookies(Key) &amp; &quot;&lt;br&gt;&quot;)<br /> </font
+      ><font color="#FF0000" size="2" face="Courier New">21</font
+      ><font color="#008000" size="2" face="Courier New"
+        >&nbsp;&nbsp;&nbsp;Next<br /> </font
+      ><font color="#FF0000" size="2" face="Courier New">22</font
+      ><font color="#008000" size="2" face="Courier New"
+        >&nbsp;&nbsp;&nbsp;<br /> </font
+      ><font color="#FF0000" size="2" face="Courier New">23</font
+      ><font color="#008000" size="2" face="Courier New"
+        >&nbsp;&nbsp;&nbsp;Response.Write(&quot;&lt;P&gt;VARIAVEIS DE
+        SERVIDOR:&lt;br&gt;&quot;)<br /> </font
+      ><font color="#FF0000" size="2" face="Courier New">24</font
+      ><font color="#008000" size="2" face="Courier New"
+        >&nbsp;&nbsp;&nbsp;Response.Write(&quot;-----------------------------&lt;br&gt;&quot;)<br /> </font
+      ><font color="#FF0000" size="2" face="Courier New">25</font
+      ><font color="#008000" size="2" face="Courier New"
+        >&nbsp;&nbsp;&nbsp;For Each Key in Request.ServerVariables<br /> </font
+      ><font color="#FF0000" size="2" face="Courier New">26</font
+      ><font color="#008000" size="2" face="Courier New"
+        >&nbsp;&nbsp;&nbsp; Response.Write( Key &amp; &quot; = &quot; &amp;
+        Request.ServerVariables(Key) &amp; &quot;&lt;br&gt;&quot;)<br /> </font
+      ><font color="#FF0000" size="2" face="Courier New">27</font
+      ><font color="#008000" size="2" face="Courier New"
+        >&nbsp;&nbsp;&nbsp;Next<br /> </font
+      ><font color="#FF0000" size="2" face="Courier New">28</font
+      ><font color="#008000" size="2" face="Courier New"
+        >&nbsp;&nbsp;&nbsp;%&gt;</font
+      ><font size="2" face="Courier New"><br /> </font
+      ><font color="#FF0000" size="2" face="Courier New">29</font
+      ><font size="2" face="Courier New"
+        >&nbsp;&nbsp;&nbsp;&lt;/BODY&gt;<br /> </font
+      ><font color="#FF0000" size="2" face="Courier New">30</font
+      ><font size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&lt;/HTML&gt;</font>
+    </p>
+  </body>
+</html>
